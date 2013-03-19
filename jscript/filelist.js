@@ -12,6 +12,16 @@ var excludeFilePattern;
 var shell;
 var fileSystem;
 
+// DateのtoLocaleStringを独自書式に変更.
+Date.prototype.toLocaleDateString = function()
+{
+    return [
+        this.getFullYear(),
+        this.getMonth() + 1,
+        this.getDate()
+        ].join( '/' );
+}
+
 
 function main() {
 	
