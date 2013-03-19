@@ -1,6 +1,9 @@
 REM ^を出力する際は^^とすること.
 REM |を出力する際は^|とすること.
 
+REM 出力対象対とするディレクトリパターン
+set EXCLUDE_DIR=(\log)
+
 REM 出力対象外とするファイルパターン
 set EXCLUDE_FILE=(^^コピー^|.*vshost.*^|history.dat)
 

@@ -2,6 +2,8 @@
 
 // ベースファイルパス
 var baseDir;
+// 対象外とするフォルダパターン
+var excludeDirPattern;
 // 対象外とする拡張子のパターン
 var excludeExtensionPattern;
 // 対象外とするファイル名のパターン
@@ -18,6 +20,7 @@ function main() {
 	
 	baseDir = WScript.Arguments(0);
 
+	excludeDirPattern = new RegExp(shell.ExpandEnvironmentStrings("%EXCLUDE_DIR%"));
 	excludeExtensionPattern = new  RegExp(shell.ExpandEnvironmentStrings("%EXCLUDE_EXTENSION%"));
 	excludeFilePattern = new  RegExp(shell.ExpandEnvironmentStrings("%EXCLUDE_FILE%"));
 
@@ -25,6 +28,11 @@ function main() {
 }
 
 function parse(nowDir) {
+
+	if (nowDir.search(excludeDirPattern) != -1) {	
+		return;
+	}
+		
 	
 	var dir = fileSystem.GetFolder(nowDir);
 	var files = new Enumerator(dir.files);
