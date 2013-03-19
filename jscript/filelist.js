@@ -1,10 +1,10 @@
-//�^�C���X�^���v�ꗗ(CSV)��������������.
+//タイムスタンプ一覧(CSV)を自動生成する.
 
-// �x�[�X�t�@�C���p�X
+// ベースファイルパス
 var baseDir;
-// �ΏۊO�Ƃ���g���q�̃p�^�[��
+// 対象外とする拡張子のパターン
 var excludeExtensionPattern;
-// �ΏۊO�Ƃ���t�@�C�����̃p�^�[��
+// 対象外とするファイル名のパターン
 var excludeFilePattern;
 
 var shell;

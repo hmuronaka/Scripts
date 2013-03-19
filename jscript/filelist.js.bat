@@ -1,10 +1,10 @@
-REM ^���o�͂���ۂ�^^�Ƃ��邱��.
-REM |���o�͂���ۂ�^|�Ƃ��邱��.
+REM ^を出力する際は^^とすること.
+REM |を出力する際は^|とすること.
 
-REM �o�͑ΏۊO�Ƃ���t�@�C���p�^�[��
-set EXCLUDE_FILE=(^^�R�s�[^|.*vshost.*^|history.dat)
+REM 出力対象外とするファイルパターン
+set EXCLUDE_FILE=(^^コピー^|.*vshost.*^|history.dat)
 
-REM �o�͑ΏۊO�Ƃ���g���q�p�^�[��
+REM 出力対象外とする拡張子パターン
 set EXCLUDE_EXTENSION=\.(pdb^|tlog^|lnk^|bmp)$
 cscript filelist.js src > result.csv
 cscript filelist.js Data >> result.csv

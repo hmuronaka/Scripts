@@ -1,8 +1,8 @@
-# w’èƒtƒHƒ‹ƒ_“à‚Ìƒtƒ@ƒCƒ‹‚Ìƒ^ƒCƒ€ƒXƒ^ƒ“ƒvˆê——(CSV)‚ğ©“®¶¬‚·‚é.
+# æŒ‡å®šãƒ•ã‚©ãƒ«ãƒ€å†…ã®ãƒ•ã‚¡ã‚¤ãƒ«ã®ã‚¿ã‚¤ãƒ ã‚¹ã‚¿ãƒ³ãƒ—ä¸€è¦§(CSV)ã‚’è‡ªå‹•ç”Ÿæˆã™ã‚‹.
 require 'pathname'
 require 'kconv'
 
-#ƒtƒ@ƒCƒ‹ƒpƒX‚ğæ“¾‚·‚é.
+#ãƒ•ã‚¡ã‚¤ãƒ«ãƒ‘ã‚¹ã‚’å–å¾—ã™ã‚‹.
 $baseDir = ARGV[0]
 $excludeExtensionPattern
 $excludeFilePattern
@@ -47,7 +47,7 @@ end
 
 
 def printFile(nowDir, aFilename, fullPath)
-	#o—Í.
+	#å‡ºåŠ›.
 	updateTime = File.mtime(fullPath)
 	updateTimeStr = updateTime.strftime("%Y/%m/%d %H:%M:%S")
 	puts nowDir + "," + aFilename + "," + File.size(fullPath).to_s + ", " +  updateTimeStr
