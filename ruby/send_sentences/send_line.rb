@@ -3,8 +3,7 @@ send_file = 'sentence'
 temp_file = send_file + ".temp"
 read_dir = "~/english_grammer_basic/"
 read_file = read_dir + "unit1.txt"
-#mail_address = "YFA67198@nifty.com"
-mail_address = "caprice29@i.softbank.jp"
+mail_address = "your@mail.com"
 mail_title = "english_grammer"
 
 #sentenceファイルがなければ、sentenceファイルを作成する.
